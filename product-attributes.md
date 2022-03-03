@@ -4,7 +4,7 @@ Below are the abstract steps for selecting product attributes from `Scayle` JSON
 - Then we feed their JSON response to our mappers for the sake of transforming them into a simpler and more meaningful form.
 
 ```javascript
-  static bapiProductAttributesToFrontasticAttributes: (attributesData) => Attributes = (
+  static bapiProductAttributesToFrontasticAttributes = (
     attributesData, //response.attributes
   ) => {
     const attributes = {};
@@ -36,9 +36,7 @@ Below are the abstract steps for selecting product attributes from `Scayle` JSON
     return attributes;
   };
 
-  static bapiProductAdvanceAttributesToFrontasticAttributes: (
-    attributesData: BapiProductAdvanceAttributes,
-  ) => Attributes = (
+  static bapiProductAdvanceAttributesToFrontasticAttributes = (
         attributesData //response.advancedAttributes
       ) => {
     const attributes = {};
